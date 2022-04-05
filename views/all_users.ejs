@@ -15,19 +15,49 @@
 
     <title>Workout app database</title>
   </head>
-  <body>
+  <body style="background-color: #292b2e; color: white">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="http://localhost:1337/">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Library</li>
+        <li class="breadcrumb-item">
+          <a href="http://localhost:1337/">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Users</li>
       </ol>
     </nav>
-  
-      <h2>Users:</h2>
-      <ul>
-        <% users.forEach(function(user){ %>
-            <li onclick="location.href='/user/<%=user.username%>'"><%=user.username%></li>
+
+    <div class="px-4 py-5 my-5 text-center">
+      <h1 class="display-1 fw-bold">Users</h1>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <table class="table table-dark rounded" style="width: 75%">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date of birth</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(function(user, i){ %>
+          <tr class="user-row" onclick="location.href='/user/<%=user.username%>'" style="cursor: pointer;">
+            <th scope="row"><%=i + 1%></th>
+            <td><%=user.username%></td>
+            <td><%=user.email%></td>
+            <td><%=user.date_of_birth%></td>
+          </tr>
           <% }); %>
-      </ul>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <ul>
+      <% users.forEach(function(user, i){ %>
+      <li onclick="location.href='/user/<%=user.username%>'">
+        <%=user.username%> (<%=i + 1%>)
+      </li>
+      <% }); %>
+    </ul> -->
   </body>
 </html>

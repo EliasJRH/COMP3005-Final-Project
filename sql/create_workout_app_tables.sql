@@ -7,7 +7,7 @@ drop table if exists ROUTINE_EXERCISE_LIST;
 
 CREATE TABLE USER (
 	username text primary key NOT NULL, -- username in app
-	email text not null,
+	email text not null, -- email required
 	date_of_birth text, -- optional date of birth
 	password text NOT NULL -- user password
 );
@@ -19,7 +19,7 @@ create table ROUTINE(
 	skill_level text, -- skill level of routine (ex: beginner, novice, intermediate etc.)
 	routine_name text not null, -- name of routine
 	estimated_time integer, -- estimated time in minutes of how long the routine should take to complete
-	made_by integer not null,
+	made_by text not null,
 	foreign key(made_by) references USER(username)
 );
 
@@ -49,11 +49,11 @@ create table SAVED(
 create table ROUTINE_EXERCISE_LIST(
 	routine_id integer not null,
 	position_no integer not null,
-	exercise_id integer not null,
+	exercise_name text not null,
 	reps_or_time_based text not null, -- "Reps or "Time"
 	reps_or_time integer not null, -- If "reps", then a numerical value representing number of repitions
 	-- if "time" an integer representing number of minutes 
 	foreign key (routine_id) references ROUTINE(routine_id),
-	foreign key (exercise_id) references EXERCISE(exercise_id),
+	foreign key (exercise_name) references EXERCISE(exercise_name),
 	primary key (routine_id, position_no)
 );

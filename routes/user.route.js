@@ -4,7 +4,6 @@ const db = require("../database");
 
 router.get("/", async (req, res) => {
   let users = [];
-  let usersagain = []
   db.serialize(function () {
     db.each("select * from user", function (err, row) {
         users.push(row);
