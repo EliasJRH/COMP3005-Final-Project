@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/EliasJRH/COMP3005-Final-Project#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "express-handlebars": "^6.0.3",
     "sqlite3": "^4.2.0"
   },
   "devDependencies": {

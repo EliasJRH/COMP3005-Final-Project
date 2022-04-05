@@ -1,0 +1,24 @@
+const express = require("express");
+const router = express.Router();
+const db = require("../database");
+
+router.get("/", async (req, res) => {
+  let users = [];
+  let usersagain = []
+  db.serialize(function () {
+    db.each("select * from user", function (err, row) {
+        users.push(row);
+    },
+      function () {
+        // All done fetching records, render response
+        res.render("users", { users: users });
+      }
+    );
+  });
+});
+
+router.get("/:username", async (req, res) => {
+  res.render("user", {name: req.params.username})
+});
+
+module.exports = router;
