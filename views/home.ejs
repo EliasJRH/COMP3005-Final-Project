@@ -15,13 +15,26 @@
 
     <title>Workout app database</title>
   </head>
-  <body>
+  <body style="background-color: #292b2e; color: white">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+      </ol>
+    </nav>
+
     <div class="px-4 py-5 my-5 text-center">
       <h1 class="display-1 fw-bold">Workout app database</h1>
       <h4 class="display-8">COMP3005 Final Project</h4>
       <h4 class="display-9">By: Elias Hawa</h4>
     </div>
 
-    <button type="button" class="btn btn-primary" onclick="location.href='/user'">Users</button>
+    <div class="container my-3">
+      <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/user'">Users</button>
+          <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/routine'">Routines</button>
+          <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/exercise'">Exercises</button>
+      </div>
+  </div>
+    
   </body>
 </html>

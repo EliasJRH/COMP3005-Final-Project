@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
     },
       function () {
         // All done fetching records, render response
-        res.render("users", { users: users });
+        res.render("all_users", { users: users });
       }
     );
   });
