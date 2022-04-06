@@ -12,9 +12,9 @@ router.get("/", async (req, res) => {
     db.each(
       "select * from routine where routine_name like $name and routine_type like $type and equipment_needed like $equipment",
       {
-        $name: '%' + name + '%',
-        $type: '%' + type + '%',
-        $equipment: '%' + equipment + '%',
+        $name: "%" + name + "%",
+        $type: "%" + type + "%",
+        $equipment: "%" + equipment + "%",
       },
       function (err, row) {
         routines.push(row);
@@ -25,7 +25,6 @@ router.get("/", async (req, res) => {
       }
     );
   });
-
 });
 
 module.exports = router;

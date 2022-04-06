@@ -1,51 +1,67 @@
 <%- include('partials/header'); -%>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="http://localhost:1337/">Home</a>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">Routines</li>
-      </ol>
-    </nav>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="http://localhost:1337/">Home</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Exercises</li>
+  </ol>
+</nav>
 
-    <div class="px-4 py-5 my-5 text-center">
-      <h1 class="display-1 fw-bold">Routines</h1>
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-1 fw-bold">Routines</h1>
+</div>
+
+<div style="justify-content: center; display: flex">
+  <form
+    style="width: 75%"
+    action="/exercise"
+    class="form-inline d-flex justify-content-start md-form form-sm mt-0"
+  >
+    <input
+      class="form-control routine-search-bar"
+      type="text"
+      placeholder="Exercise name"
+      name="name"
+    />
+    <input
+      class="form-control routine-search-bar"
+      type="text"
+      placeholder="Equipment requierd"
+      name="equipment"
+    />
+    <input
+      class="form-control routine-search-bar"
+      type="text"
+      placeholder="Targeted muscle groups"
+      name="targeted_muscle_groups%"
+    />
+    <div class="routine-search-button">
+      <button class="btn btn-primary">Search</button>
     </div>
+  </form>
+</div>
 
-    <div style="justify-content: center; display: flex;">
-
-    
-      <form style="width: 75%;"
-        action="/exercise"
-        class="form-inline d-flex justify-content-start md-form form-sm mt-0"
-      >
-        <input class="form-control routine-search-bar" type="text" placeholder="Exercise name" name="name"/>
-        <input class="form-control routine-search-bar" type="text" placeholder="Equipment requierd" name="equipment"/>
-        <input class="form-control routine-search-bar" type="text" placeholder="Targeted muscle groups" name="targeted_muscle_groups%"/>
-        <div class="routine-search-button"> <button class="btn btn-primary">search</button></div>
-      </form>
-    </div>
-
-    <div class="d-flex justify-content-center">
-      <table class="table table-dark rounded" style="width: 75%">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Equipment required</th>
-            <th scope="col">Targeted Muscle Groups</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% exercises.forEach(function(exercise, i){ %>
-          <tr class="routine-row" style="cursor: pointer">
-            <th scope="row"><%=i + 1%></th>
-            <td><%=exercise.exercise_name%></td>
-            <td><%=exercise.exercise_equipment%></td>
-            <td><%=exercise.targeted_muscle_group%></td>
-          </tr>
-          <% }); %>
-        </tbody>
-      </table>
-    </div>
+<div class="d-flex justify-content-center">
+  <table class="table table-dark rounded" style="width: 75%">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Equipment required</th>
+        <th scope="col">Targeted Muscle Groups</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% exercises.forEach(function(exercise, i){ %>
+      <tr class="routine-row" style="cursor: pointer">
+        <th scope="row"><%=i + 1%></th>
+        <td><%=exercise.exercise_name%></td>
+        <td><%=exercise.exercise_equipment%></td>
+        <td><%=exercise.targeted_muscle_group%></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
 <%- include('partials/footer'); -%>

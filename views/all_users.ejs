@@ -1,37 +1,37 @@
 <%- include('partials/header'); -%>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="http://localhost:1337/">Home</a>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">Users</li>
-      </ol>
-    </nav>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="http://localhost:1337/">Home</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Users</li>
+  </ol>
+</nav>
 
-    <div class="px-4 py-5 my-5 text-center">
-      <h1 class="display-1 fw-bold">Users</h1>
-    </div>
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-1 fw-bold">Users</h1>
+</div>
 
-    <div class="d-flex justify-content-center">
-      <table class="info-table table table-dark rounded">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Username</th>
-            <th scope="col">Email</th>
-            <th scope="col">Date of birth</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% users.forEach(function(user, i){ %>
-          <tr class="user-row" onclick="location.href='/user/<%=user.username%>'">
-            <th scope="row"><%=i + 1%></th>
-            <td><%=user.username%></td>
-            <td><%=user.email%></td>
-            <td><%=user.date_of_birth%></td>
-          </tr>
-          <% }); %>
-        </tbody>
-      </table>
-    </div>
+<div class="d-flex justify-content-center">
+  <table class="info-table table table-dark rounded">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date of birth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(function(user, i){ %>
+      <tr class="user-row" onclick="location.href='/user/<%=user.username%>'">
+        <th scope="row"><%=i + 1%></th>
+        <td><%=user.username%></td>
+        <td><%=user.email%></td>
+        <td><%=user.date_of_birth%></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
 <%- include('partials/footer'); -%>
