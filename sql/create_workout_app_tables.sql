@@ -14,10 +14,10 @@ CREATE TABLE USER (
 
 create table ROUTINE(
 	routine_id integer primary key not null, -- routine id number
+	routine_name text not null, -- name of routine
 	routine_type text not null, -- routine type (ex: chest, legs, cardio, yoga, etc.)
 	equipment_needed text, -- equipment needed for routine (ex: bench, dumbells, bike, yoga matt etc.)
 	skill_level text, -- skill level of routine (ex: beginner, novice, intermediate etc.)
-	routine_name text not null, -- name of routine
 	estimated_time integer, -- estimated time in minutes of how long the routine should take to complete
 	made_by text not null,
 	foreign key(made_by) references USER(username)
@@ -26,13 +26,13 @@ create table ROUTINE(
 create table EXERCISE(
 	exercise_name text primary key not null,
 	exericse_equipment text,
-	targeted_muslce_group text,
+	targeted_musclce_group text,
 	picture_file_name text
 );
 
 create table FRIENDS(
-	friends_user_one integer not null,
-	friends_user_two integer not null,
+	friends_user_one text not null,
+	friends_user_two text not null,
 	foreign key (friends_user_one) references USER(username),
 	foreign key (friends_user_two) references USER(username),
 	primary key (friends_user_one, friends_user_two)
@@ -52,7 +52,7 @@ create table ROUTINE_EXERCISE_LIST(
 	exercise_name text not null,
 	reps_or_time_based text not null, -- "Reps or "Time"
 	reps_or_time integer not null, -- If "reps", then a numerical value representing number of repitions
-	-- if "time" an integer representing number of minutes 
+	-- if "time" is an integer representing number of minutes 
 	foreign key (routine_id) references ROUTINE(routine_id),
 	foreign key (exercise_name) references EXERCISE(exercise_name),
 	primary key (routine_id, position_no)
