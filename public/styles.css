@@ -1,0 +1,21 @@
+.user-row {
+  cursor: pointer;
+}
+
+.info-table {
+  width: 75%;
+}
+
+.routine-search-bar {
+  margin-bottom: 13px;
+  margin-right: 10px;
+  width: 25%;
+  border-radius: 6px;
+}
+
+.routine-search-button {
+  margin-bottom: 13px;
+  width: 25%;
+  display: flex;
+  flex-direction: row-reverse;
+}

@@ -12,12 +12,17 @@
       <h1 class="display-1 fw-bold">Routines</h1>
     </div>
 
-    <div id="routine-search-bar">
-      <form
+    <div style="justify-content: center; display: flex;">
+
+    
+      <form style="width: 75%;"
         action="/routine"
-        class="form-inline d-flex justify-content-center md-form form-sm mt-0"
+        class="form-inline d-flex justify-content-start md-form form-sm mt-0"
       >
-        <input type="text" placeholder="Search.." />
+        <input class="form-control routine-search-bar" type="text" placeholder="Workout name" name="name"/>
+        <input class="form-control routine-search-bar" type="text" placeholder="Workout type" name="type"/>
+        <input class="form-control routine-search-bar" type="text" placeholder="Equipment required" name="equipment"/>
+        <div class="routine-search-button"> <button class="btn btn-primary">search</button></div>
       </form>
     </div>
 
