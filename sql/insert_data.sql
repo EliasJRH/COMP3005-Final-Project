@@ -9,9 +9,9 @@ insert into USER values("Wervelf", "StephenSWalton@teleworm.us", "22/12/1986", "
 insert into USER values("Hatintibleat", "FlorenceJPerkins@teleworm.us", "23/9/2002", "ab0NohMahb");
 insert into USER values("builtMAN17", "bigM@n@wrktot.com", "19/7/2000", "wkrtoutI1l2f3");
 
-insert into EXERCISE(exercise_name, exericse_equipment, targeted_musclce_group) values("Dumbell Raise", "Dumbbell", "Shoulders");
-insert into EXERCISE(exercise_name, targeted_musclce_group) values("Wide Gripped Pushup", "Chest, Shoulders, Triceps");
-insert into EXERCISE(exercise_name, targeted_musclce_group) values("Incline Pushup", "Chest, Shoulders, Triceps");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_group) values("Dumbell Raise", "Dumbbell", "Shoulders");
+insert into EXERCISE(exercise_name, targeted_muscle_group) values("Wide Gripped Pushup", "Chest, Shoulders, Triceps");
+insert into EXERCISE(exercise_name, targeted_muscle_group) values("Incline Pushup", "Chest, Shoulders, Triceps");
 
 insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, estimated_time, made_by) 
 values ("Quick Chest Pump", "Dumbbell, Bench", "Novice", "Chest", 30, "builtMAN17");
