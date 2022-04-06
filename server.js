@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 var app = express();
 
 app.get("/ping", (req, res) => {
@@ -6,7 +7,7 @@ app.get("/ping", (req, res) => {
 });
 
 app.set('view engine', 'ejs')
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res, next) {
     res.render('home');
