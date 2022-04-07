@@ -11,10 +11,10 @@ router.get("/", async (req, res) => {
     });
     db.each(
       "select count(*) from user",
-      function (err, row) {
+      (err, row) => {
         count = row["count(*)"];
       },
-      function () {
+      () => {
         // All done fetching records, render response
         res.render("all_users", { users: users, count: count });
       }

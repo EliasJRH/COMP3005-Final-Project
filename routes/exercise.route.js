@@ -7,15 +7,27 @@ router.get("/", async (req, res) => {
   db.serialize(function () {
     db.each(
       "select * from exercise",
-      function (err, row) {
+      (err, row) => {
         exercises.push(row);
       },
-      function () {
+      () => {
         // All done fetching records, render response
         res.render("all_exercises", { exercises: exercises });
       }
     );
   });
+});
+
+router.get("/:exercise_name", async (req, res) => {
+  let exercise_info;
+  db.get(
+    "select * from exercise where exercise_name = ?",
+    req.params.exercise_name,
+    (err, row) =>{
+      exercise_info = row;
+      res.render("exercise", {exercise: exercise_info})
+    }
+  );
 });
 
 module.exports = router;

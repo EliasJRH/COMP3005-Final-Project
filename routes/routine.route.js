@@ -16,10 +16,10 @@ router.get("/", async (req, res) => {
         $type: "%" + type + "%",
         $equipment: "%" + equipment + "%",
       },
-      function (err, row) {
+      (err, row) => {
         routines.push(row);
       },
-      function () {
+      () => {
         res.render("all_routines", { routines: routines });
       }
     );
@@ -41,16 +41,14 @@ router.get("/:id", async (req, res) => {
     db.each(
       "select * from routine_exercise_list natural join exercise where routine_id = ? order by position_no asc",
       req.params.id,
-      function (err, row) {
-        exercises.push(row)
-      }, function(){
-        console.log(exercises)
+      (err, row) => {
+        exercises.push(row);
+      },
+      () => {
         res.render("routine", { routine: routine_info, exercises: exercises });
       }
     );
   });
-
-  
 });
 
 module.exports = router;
