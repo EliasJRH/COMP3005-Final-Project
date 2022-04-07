@@ -50,6 +50,7 @@ create table ROUTINE_EXERCISE_LIST(
 	routine_id integer not null,
 	position_no integer not null,
 	exercise_name text not null,
+	sets integer not null,
 	reps_or_time_based text not null, -- "Reps or "Time"
 	reps_or_time integer not null, -- If "reps", then a numerical value representing number of repitions
 	-- if "time" is an integer representing number of minutes 

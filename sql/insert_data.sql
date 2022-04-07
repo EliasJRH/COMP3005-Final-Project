@@ -15,3 +15,7 @@ insert into EXERCISE(exercise_name, targeted_muscle_group) values("Incline Pushu
 
 insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, estimated_time, made_by) 
 values ("Quick Chest Pump", "Dumbbell, Bench", "Novice", "Chest", 30, "builtMAN17");
+
+insert into ROUTINE_EXERCISE_LIST values(1, 1, "Dumbell Raise", 2, "Rep", 12);
+insert into ROUTINE_EXERCISE_LIST values(1, 2, "Wide Gripped Pushup", 4, "Rep", 12);
+insert into ROUTINE_EXERCISE_LIST values(1, 3, "Incline Pushup", 4, "Rep", 12);
