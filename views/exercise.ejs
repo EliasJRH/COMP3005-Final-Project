@@ -1,0 +1,33 @@
+<%- include('partials/header'); -%>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="http://localhost:1337/">Home</a>
+    </li>
+    <li class="breadcrumb-item">
+      <a href="http://localhost:1337/exercise">Exercises</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      <%=exercise.exercise_name%>
+    </li>
+  </ol>
+</nav>
+
+<div class="px-4 py-2 my-5 text-center">
+  <h3 class="display-3 fw-bold"><%=exercise.exercise_name%></h3>
+  <div>
+    <p>
+      <b>Equipment: </b> <%=exercise.exercise_equipment%> •
+      <b>Targeted muscle group: </b> <%=exercise.targeted_muscle_group%>
+    </p>
+    <% if (exercise.picture_file_name !== null){%>
+    <img
+      src="/images/<%=exercise.picture_file_name%>"
+      alt="<%=exercise.exercise_name%>"
+      style="width: 70%"
+    />
+    <% } %>
+  </div>
+</div>
+<%- include('partials/footer'); -%>
