@@ -20,11 +20,37 @@ router.get("/", async (req, res) => {
         routines.push(row);
       },
       function () {
-        // All done fetching records, render response
         res.render("all_routines", { routines: routines });
       }
     );
   });
+});
+
+router.get("/:id", async (req, res) => {
+  let routine_info = {};
+  let exercises = [];
+  //maybe add rep and time count
+  db.serialize(function () {
+    db.get(
+      "select * from routine where routine_id = ?",
+      req.params.id,
+      (err, row) => {
+        routine_info = row;
+      }
+    );
+    db.each(
+      "select * from routine_exercise_list natural join exercise where routine_id = ? order by position_no asc",
+      req.params.id,
+      function (err, row) {
+        exercises.push(row)
+      }, function(){
+        console.log(exercises)
+        res.render("routine", { routine: routine_info, exercises: exercises });
+      }
+    );
+  });
+
+  
 });
 
 module.exports = router;
