@@ -9,18 +9,15 @@ router.get("/", async (req, res) => {
 
   let routines = [];
   db.serialize(function () {
-    db.each(
+    db.all(
       "select * from routine where routine_name like $name and routine_type like $type and equipment_needed like $equipment",
       {
         $name: "%" + name + "%",
         $type: "%" + type + "%",
         $equipment: "%" + equipment + "%",
       },
-      (err, row) => {
-        routines.push(row);
-      },
-      () => {
-        res.render("all_routines", { routines: routines });
+      (err, rows) => {
+        res.render("all_routines", { routines: rows });
       }
     );
   });
@@ -38,14 +35,11 @@ router.get("/:id", async (req, res) => {
         routine_info = row;
       }
     );
-    db.each(
+    db.all(
       "select * from routine_exercise_list natural join exercise where routine_id = ? order by position_no asc",
       req.params.id,
-      (err, row) => {
-        exercises.push(row);
-      },
-      () => {
-        res.render("routine", { routine: routine_info, exercises: exercises });
+      (err, rows) => {
+        res.render("routine", { routine: routine_info, exercises: rows });
       }
     );
   });

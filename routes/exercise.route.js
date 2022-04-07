@@ -5,14 +5,11 @@ const db = require("../database");
 router.get("/", async (req, res) => {
   let exercises = [];
   db.serialize(function () {
-    db.each(
+    db.all(
       "select * from exercise",
-      (err, row) => {
-        exercises.push(row);
-      },
-      () => {
+      (err, rows) => {
         // All done fetching records, render response
-        res.render("all_exercises", { exercises: exercises });
+        res.render("all_exercises", { exercises: rows });
       }
     );
   });
