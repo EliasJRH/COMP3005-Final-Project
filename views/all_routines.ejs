@@ -57,7 +57,7 @@
     </thead>
     <tbody>
       <% routines.forEach(function(routine, i){ %>
-      <tr class="routine-row" style="cursor: pointer" onclick="location.href='/routine/<%=routine.routine_id%>'">
+      <tr class="table-row" onclick="location.href='/routine/<%=routine.routine_id%>'">
         <th scope="row"><%=i + 1%></th>
         <td><%=routine.routine_name%></td>
         <td><%=routine.routine_type%></td>
