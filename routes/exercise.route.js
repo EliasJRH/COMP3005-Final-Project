@@ -21,7 +21,7 @@ router.get("/", async (req, res) => {
       },
       (err, rows) => {
         // All done fetching records, render response
-        res.render("all_exercises", { exercises: rows });
+        res.render("list_views/all_exercises", { exercises: rows });
       }
     );
   });
@@ -34,7 +34,7 @@ router.get("/:exercise_name", async (req, res) => {
     req.params.exercise_name,
     (err, row) => {
       exercise_info = row;
-      res.render("exercise", { exercise: exercise_info });
+      res.render("singles/exercise", { exercise: exercise_info });
     }
   );
 });

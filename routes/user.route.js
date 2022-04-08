@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
     db.all(
       "select username, email, date_of_birth from user",
       function (err, rows) {
-        res.render("all_users", { users: rows });
+        res.render("list_views/all_users", { users: rows });
       }
     );
   });
@@ -49,7 +49,7 @@ router.get("/:username", async (req, res) => {
       (err, row) => {
         user_info = row;
         console.log(saved_routines)
-        res.render("user", {
+        res.render("singles/user", {
           user: user_info,
           friends: friends,
           made_routines: made_routines,

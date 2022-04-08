@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
         $equipment: "%" + equipment + "%",
       },
       (err, rows) => {
-        res.render("all_routines", { routines: rows });
+        res.render("list_views/all_routines", { routines: rows });
       }
     );
   });
@@ -37,7 +37,7 @@ router.get("/:id", async (req, res) => {
       "select * from routine_exercise_list natural join exercise where routine_id = ? order by position_no asc",
       req.params.id,
       (err, rows) => {
-        res.render("routine", { routine: routine_info, exercises: rows });
+        res.render("singles/routine", { routine: routine_info, exercises: rows });
       }
     );
   });
