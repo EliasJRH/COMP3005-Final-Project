@@ -39,11 +39,11 @@ create table FRIENDS(
 );
 
 create table SAVED(
-	saved_user_id integer not null,
+	saved_username text not null,
 	saved_routine_id integer not null,
-	foreign key (saved_user_id) references USER(username),
+	foreign key (saved_username) references USER(username),
 	foreign key (saved_routine_id) references ROUTINE(routine_id),
-	primary key (saved_user_id, saved_routine_id)
+	primary key (saved_username, saved_routine_id)
 );
 
 create table ROUTINE_EXERCISE_LIST(

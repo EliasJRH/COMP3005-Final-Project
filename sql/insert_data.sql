@@ -33,6 +33,14 @@ insert into FRIENDS values ("Wervelf", "Lienly");
 insert into FRIENDS values ("bILLY12", "builtMAN17");
 insert into FRIENDS values ("builtMAN17", "bILLY12");
 
+insert into SAVED values ("Hatintibleat", 3);
+insert into SAVED values ("builtMAN17", 1);
+insert into SAVED values ("Hatintibleat", 2);
+insert into SAVED values ("builtMAN17", 2);
+insert into SAVED values ("bILLY12", 1);
+insert into SAVED values ("Wervelf", 2);
+insert into SAVED values ("builtMAN17", 3);
+
 
 
 
