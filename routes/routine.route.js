@@ -7,7 +7,6 @@ router.get("/", async (req, res) => {
   let type = req.query.type ? req.query.type : "";
   let equipment = req.query.equipment ? req.query.equipment : "";
 
-  let routines = [];
   db.serialize(function () {
     db.all(
       "select * from routine where routine_name like $name and routine_type like $type and equipment_needed like $equipment",
@@ -25,7 +24,6 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   let routine_info = {};
-  let exercises = [];
   //maybe add rep and time count
   db.serialize(function () {
     db.get(

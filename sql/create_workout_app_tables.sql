@@ -26,7 +26,7 @@ create table ROUTINE(
 create table EXERCISE(
 	exercise_name text primary key not null,
 	exercise_equipment text,
-	targeted_muscle_group text,
+	targeted_muscle_groups text,
 	picture_file_name text
 );
 
