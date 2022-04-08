@@ -3,9 +3,13 @@ const router = express.Router();
 const db = require("../database");
 
 router.get("/", async (req, res) => {
+  let username = req.query.username ? req.query.username : "";
   db.serialize(function () {
     db.all(
-      "select username, email, date_of_birth from user",
+      "select username, email, date_of_birth from user where username like $username",
+      {
+        $username: "%" + username + "%",
+      },
       function (err, rows) {
         res.render("list_views/all_users", { users: rows });
       }
@@ -48,7 +52,7 @@ router.get("/:username", async (req, res) => {
       req.params.username,
       (err, row) => {
         user_info = row;
-        console.log(saved_routines)
+        console.log(saved_routines);
         res.render("singles/user", {
           user: user_info,
           friends: friends,

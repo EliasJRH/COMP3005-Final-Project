@@ -19,3 +19,9 @@
   display: flex;
   flex-direction: row-reverse;
 }
+
+.user-search-button {
+  margin-bottom: 13px;
+  width: 25%;
+  display: flex;
+}
