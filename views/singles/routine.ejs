@@ -30,7 +30,7 @@
   <div style="display: flex; flex-direction: column; width: 60%; margin: auto">
     <%exercises.forEach(function(exercise, i){ %>
     <div style="padding-bottom: 20px">
-      <li style="font-size: x-large"><%=exercise.exercise_name%></li>
+      <a href="http://localhost:1337/exercise/<%=exercise.exercise_name%>" style="text-decoration: none; color: white"><li style="font-size: x-large"><u><%=exercise.exercise_name%></u></li></a>
       <p style="display: inline">
         <b>Sets: </b> <%=exercise.sets%> • <% if(exercise.reps_or_time_based ===
         "Rep"){ %> <b>Repitions: </b><%=exercise.reps_or_time%> <% } else{ %>
@@ -44,7 +44,7 @@
         <%=exercise.exercise_equipment%> <% } else{ %> None <% } %>
       </p style="display: inline">
       <% if (exercise.picture_file_name !== null){%>
-      <img src="/images/<%=exercise.picture_file_name%>" style="width: 75%" />
+      <img src="/images/exercises/<%=exercise.picture_file_name%>" style="width: 75%" />
       <% } %>
     </div>
 
