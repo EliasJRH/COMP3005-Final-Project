@@ -9,16 +9,47 @@ insert into USER values("Wervelf", "StephenSWalton@teleworm.us", "22/12/1986", "
 insert into USER values("Hatintibleat", "FlorenceJPerkins@teleworm.us", "23/9/2002", "ab0NohMahb");
 insert into USER values("builtMAN17", "bigM@n@wrktot.com", "19/7/2000", "wkrtoutI1l2f3");
 
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Underhand Dumbell Raise", "Dumbbell", "Shoulders", "uh_dumbell_raise.jpg");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Underhand Dumbbell Raise", "Dumbbell", "Shoulders", "uh_dumbbell_raise.jpg");
 insert into EXERCISE(exercise_name, targeted_muscle_groups) values("Wide Gripped Pushup", "Chest, Shoulders, Triceps");
 insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups) values("Incline Pushup", "None/Bench", "Chest, Shoulders, Triceps");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Bench Press", "Bench, Barbell bar", "Shoulders, Chest, Triceps", "bench_press.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Barbell Row", "Barbell bar", "Upper Back, Lats, Traps, Middle Back, Biceps","barbell_row.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Incline Dumbbell Fly", "Dumbbell, Bench", "Shoulders, Chest, Biceps", "incline_dumbell_fly.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Lateral Pull-Down", "Lateral pulldown machine", "Shoulders, Lats, Upper Back, Middle Back, Traps, Biceps", "lateral_pull_down.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("One-arm Cable Press", "Cable machine", "Chest, Shoulders, Triceps", "one-arm-cable-press.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Dumbbell Pull-Over", "Bench, Dumbbell", "Chest, Lats", "dumbell-pull-over.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Barbell Squat", "Barbell bar", "Quads, Glutes, Abs", "barbell_squat.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Romanian Deadlift", "Barbell bar", "hamstrings, Glutes, Lower Back", "romanian_deadlift.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Leg Extension", "Leg extension machine", "Quads", "leg_extension.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Hamstring Curl", "Hamstring curl machine", "Hamstrings", "hamstring_curl.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Crunch", "Yoga mat", "Abs, Obliques, Hip Flexors", "crunch.webp");
+insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Plank", "Yoga mat", "Abs, Obliques", "plank.webp");
+
 
 insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, estimated_time, made_by) 
 values ("Quick Chest Pump", "Dumbbell, Bench", "Novice", "Chest", 30, "builtMAN17");
+insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, estimated_time, made_by) 
+values ("Weekly Chest Killer", "Barbell, Bench, Dumbbells, Lat pulldown machine, Cable press machine", "Intermediate", "Chest and Back", 60, "Wervelf");
+insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, estimated_time, made_by) 
+values ("Weekly Leg Killer", "Barbell, Leg extension machine, Hamstring curl machine, Yoga mat", "Intermedia", "Legs and Abs", 60, "Wervelf");
 
-insert into ROUTINE_EXERCISE_LIST values(1, 1, "Underhand Dumbell Raise", 2, "Rep", 12);
+insert into ROUTINE_EXERCISE_LIST values(1, 1, "Underhand Dumbbell Raise", 2, "Rep", 12);
 insert into ROUTINE_EXERCISE_LIST values(1, 2, "Wide Gripped Pushup", 4, "Rep", 12);
 insert into ROUTINE_EXERCISE_LIST values(1, 3, "Incline Pushup", 4, "Rep", 12);
+
+insert into ROUTINE_EXERCISE_LIST values(2, 1, "Bench Press", 4, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(2, 2, "Barbell Row", 4, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(2, 3, "Incline Dumbbell Fly", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(2, 4, "Lateral Pull-Down", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(2, 5, "One-arm Cable Press", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(2, 6, "Dumbbell Pull-Over", 3, "Rep", 10);
+
+insert into ROUTINE_EXERCISE_LIST values(3, 1, "Barbell Squat", 4, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(3, 2, "Romanian Deadlift", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(3, 3, "Leg Extension", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(3, 4, "Hamstring Curl", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(3, 5, "Crunch", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(3, 6, "Plank", 3, "Rep", 10);
 
 insert into FRIENDS values ("Wervelf", "Hatintibleat");
 insert into FRIENDS values ("Hatintibleat", "Wervelf");
