@@ -30,8 +30,11 @@ insert into EXERCISE values("Dumbbell Curl", "Dumbbells", "Biceps", "dumbbell_cu
 insert into EXERCISE values("Standing Tricep Extension", "Dumbbells", "Tricep", "standing_tricep_extension.webp");
 insert into EXERCISE values("Cable Curl", "Cable machine", "Biceps", "cable_bicep_curl.webp");
 insert into EXERCISE values("Cable Tricep Press-Down", "Cable machine", "Triceps", "cable_tricep_press_down.webp");
-
-
+insert into EXERCISE values("Overhead Press", "Barbell Bar", "Shoulders, Triceps, Traps", "overhead_press.webp");
+insert into EXERCISE values("Chin Up", "Suspended Horizontal Bar", "Lats, Upper Back, Middle Back, Traps, Biceps", "chin_up.webp");
+insert into EXERCISE values("EZ-Bar Upright Row", "EZ-bar", "Shoulders, Traps", "ez-bar-upright-row.webp");
+insert into EXERCISE values("Incline Biceps Curl", "Bench, Dumbbells", "Biceps", "incline_bicep_curl.webp");
+insert into EXERCISE values("Lateral Raise", "Dumbbells", "Shoulders", "dumbbell_lat_raise.webp");
 
 insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, estimated_time, made_by) 
 values ("Quick Chest Pump", "Dumbbells, Bench", "Novice", "Chest", 30, "builtMAN17");
@@ -41,6 +44,8 @@ insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, 
 values ("Weekly Leg Killer", "Barbell, Leg extension machine, Hamstring curl machine, Yoga mat", "Intermediate", "Legs and Abs", 60, "Wervelf");
 insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, estimated_time, made_by) 
 values ("Weekly Arms Killer", "Lateral pulldown machine, Dip bar, Dumbbells, Cable machine", "Intermediate", "Biceps and Triceps", 60, "Wervelf");
+insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, estimated_time, made_by) 
+values ("Weekly Shoulder Killer", "Barbell Bar, Suspended Horizontal Bar, EZ-bar, Bench, Dumbbells, Cable machine", "Intermediate", "Shoulders and Arms", 60, "Wervelf");
 
 insert into ROUTINE_EXERCISE_LIST values(1, 1, "Underhand Dumbbell Raise", 2, "Rep", 12);
 insert into ROUTINE_EXERCISE_LIST values(1, 2, "Wide Gripped Pushup", 4, "Rep", 12);
@@ -67,6 +72,12 @@ insert into ROUTINE_EXERCISE_LIST values(4, 4, "Standing Tricep Extension", 3, "
 insert into ROUTINE_EXERCISE_LIST values(4, 5, "Cable Curl", 3, "Rep", 10);
 insert into ROUTINE_EXERCISE_LIST values(4, 6, "Cable Tricep Press-Down", 3, "Rep", 10);
 
+insert into ROUTINE_EXERCISE_LIST values(5, 1, "Overhead Press", 4, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(5, 2, "Chin Up", 4, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(5, 3, "EZ-Bar Upright Row", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(5, 4, "Incline Biceps Curl", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(5, 5, "Lateral Raise", 3, "Rep", 10);
+insert into ROUTINE_EXERCISE_LIST values(5, 6, "Cable Tricep Press-Down", 3, "Rep", 10);
 
 insert into FRIENDS values ("Wervelf", "Hatintibleat");
 insert into FRIENDS values ("Hatintibleat", "Wervelf");
