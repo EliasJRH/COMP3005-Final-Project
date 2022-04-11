@@ -9,21 +9,21 @@ insert into USER values("Wervelf", "StephenSWalton@teleworm.us", "22/12/1986", "
 insert into USER values("Hatintibleat", "FlorenceJPerkins@teleworm.us", "23/9/2002", "ab0NohMahb");
 insert into USER values("builtMAN17", "bigM@n@wrktot.com", "19/7/2000", "wkrtoutI1l2f3");
 
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Underhand Dumbbell Raise", "Dumbbell", "Shoulders", "uh_dumbbell_raise.jpg");
+insert into EXERCISE values("Underhand Dumbbell Raise", "Dumbbell", "Shoulders", "uh_dumbbell_raise.jpg");
 insert into EXERCISE(exercise_name, targeted_muscle_groups) values("Wide Gripped Pushup", "Chest, Shoulders, Triceps");
 insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups) values("Incline Pushup", "None/Bench", "Chest, Shoulders, Triceps");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Bench Press", "Bench, Barbell bar", "Shoulders, Chest, Triceps", "bench_press.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Barbell Row", "Barbell bar", "Upper Back, Lats, Traps, Middle Back, Biceps","barbell_row.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Incline Dumbbell Fly", "Dumbbell, Bench", "Shoulders, Chest, Biceps", "incline_dumbell_fly.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Lateral Pull-Down", "Lateral pulldown machine", "Shoulders, Lats, Upper Back, Middle Back, Traps, Biceps", "lateral_pull_down.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("One-arm Cable Press", "Cable machine", "Chest, Shoulders, Triceps", "one-arm-cable-press.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Dumbbell Pull-Over", "Bench, Dumbbell", "Chest, Lats", "dumbell-pull-over.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Barbell Squat", "Barbell bar", "Quads, Glutes, Abs", "barbell_squat.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Romanian Deadlift", "Barbell bar", "hamstrings, Glutes, Lower Back", "romanian_deadlift.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Leg Extension", "Leg extension machine", "Quads", "leg_extension.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Hamstring Curl", "Hamstring curl machine", "Hamstrings", "hamstring_curl.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Crunch", "Yoga mat", "Abs, Obliques, Hip Flexors", "crunch.webp");
-insert into EXERCISE(exercise_name, exercise_equipment, targeted_muscle_groups, picture_file_name) values("Plank", "Yoga mat", "Abs, Obliques", "plank.webp");
+insert into EXERCISE values("Bench Press", "Bench, Barbell bar", "Shoulders, Chest, Triceps", "bench_press.webp");
+insert into EXERCISE values("Barbell Row", "Barbell bar", "Upper Back, Lats, Traps, Middle Back, Biceps","barbell_row.webp");
+insert into EXERCISE values("Incline Dumbbell Fly", "Dumbbell, Bench", "Shoulders, Chest, Biceps", "incline_dumbell_fly.webp");
+insert into EXERCISE values("Lateral Pull-Down", "Lateral pulldown machine", "Shoulders, Lats, Upper Back, Middle Back, Traps, Biceps", "lateral_pull_down.webp");
+insert into EXERCISE values("One-arm Cable Press", "Cable machine", "Chest, Shoulders, Triceps", "one-arm-cable-press.webp");
+insert into EXERCISE values("Dumbbell Pull-Over", "Bench, Dumbbell", "Chest, Lats", "dumbell-pull-over.webp");
+insert into EXERCISE values("Barbell Squat", "Barbell bar", "Quads, Glutes, Abs", "barbell_squat.webp");
+insert into EXERCISE values("Romanian Deadlift", "Barbell bar", "hamstrings, Glutes, Lower Back", "romanian_deadlift.webp");
+insert into EXERCISE values("Leg Extension", "Leg extension machine", "Quads", "leg_extension.webp");
+insert into EXERCISE values("Hamstring Curl", "Hamstring curl machine", "Hamstrings", "hamstring_curl.webp");
+insert into EXERCISE values("Crunch", "Yoga mat", "Abs, Obliques, Hip Flexors", "crunch.webp");
+insert into EXERCISE values("Plank", "Yoga mat", "Abs, Obliques", "plank.webp");
 
 
 insert into ROUTINE (routine_name, equipment_needed, skill_level, routine_type, estimated_time, made_by) 
