@@ -9,8 +9,6 @@ router.get("/", async (req, res) => {
     ? req.query.targeted_muscle_groups
     : "";
 
-  console.log(req.query);
-
   db.serialize(function () {
     db.all(
       "select * from exercise where exercise_name like $name and exercise_equipment like $equipment and targeted_muscle_groups like $tmg",

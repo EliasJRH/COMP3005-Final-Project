@@ -52,7 +52,6 @@ router.get("/:username", async (req, res) => {
       req.params.username,
       (err, row) => {
         user_info = row;
-        console.log(saved_routines);
         res.render("singles/user", {
           user: user_info,
           friends: friends,
